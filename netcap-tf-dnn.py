@@ -156,7 +156,7 @@ def hms_string(sec_elapsed):
     m = int((sec_elapsed % (60 * 60)) / 60)
     s = sec_elapsed % 60
     if h == 0 and m == 0:
-        return "{:2.0f}s".format(m, s)
+        return "{:2.0f}s".format(s)
     elif h == 0:
         return "{}m {:2.0f}s".format(m, s)
     else:

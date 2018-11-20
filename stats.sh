@@ -14,7 +14,6 @@ for f in $(ls $INPUT_DIR/*_labeled.csv); do
 
 	res=${f%_labeled.csv}_RESULT.txt
 
-	#recs=$(cat $res | grep 'rows.' | grep -o -E '[0-9]+' | tr '\n' ' ')
 	recs=$(cat $res | grep 'rows.' | perl -pe 's/\x1b\[[0-9;]*m//g' | grep -o -E '[0-9]+' | tr '\n' ' ')
 
 	size=$(du -h $f | cut -f -1)
@@ -23,19 +22,11 @@ for f in $(ls $INPUT_DIR/*_labeled.csv); do
 	# -1 because of the header line
 	labels_count=$(($labels-1))
 
-	
 	time=$(cat $res | grep 'Time:')
 	time_n=${time#"Exec Time: "}
 	
-	#score=$(cat $res | grep 'Validation score:' | grep -Eo '[+-]?[0-9]+([.][0-9]+)?')
 	score=$(cat $res | grep 'Validation score:')
 	score_n=${score#"Validation score: "}
-
-	# echo "recs=$recs"
-	# echo "size=$size"
-	# echo "labels=$labels_count"
-	# echo "time=$time_n"
-	# echo "score=$score_n"
 
 	file=${f#"$INPUT_DIR/"}
 
