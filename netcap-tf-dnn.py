@@ -291,9 +291,9 @@ if arguments.drop != None:
 
 print("[INFO] columns:", df.columns)
 
-# Drop NA's (rows with missing values) prior to encoding if desired
+# Drop NA's (rows with missing numeric values) prior to encoding if desired
 if arguments.dropna:
-    print("[INFO] dropping rows with missing values, number of rows before:", len(df.index))
+    print("[INFO] dropping rows with missing numeric values, number of rows before:", len(df.index))
     df.dropna(inplace=True,axis=1)
     print("[INFO] number of rows after dropping:", len(df.index))
 

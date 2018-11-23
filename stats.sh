@@ -8,7 +8,7 @@ fi
 # remove trailing slash, if any
 INPUT_DIR=${1%/}
 
-echo -e "INPUT_DIR=$INPUT_DIR\n"
+echo -e "\nINPUT_DIR=$INPUT_DIR"
 
 printf "%-30s %-10s %-10s %-10s %-16s %s\n" "Filename" "Records" "Size" "Labels" "Time" "Score"
 for f in $(ls $INPUT_DIR/*_labeled.csv); do

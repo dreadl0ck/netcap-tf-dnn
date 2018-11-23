@@ -16,10 +16,10 @@ netcap -r Thursday-WorkingHours.pcapng -out Thursday-WorkingHours-$NUM -label -d
 netcap -r Friday-WorkingHours.pcapng -out Friday-WorkingHours-$NUM -label -description
 
 echo "[INFO] evaluating"
-eval.sh Tuesday-WorkingHours-$NUM
-eval.sh Wednesday-WorkingHours-$NUM
-eval.sh Thursday-WorkingHours-$NUM
-eval.sh Friday-WorkingHours-$NUM
+eval.sh Tuesday-WorkingHours-$NUM -dropna
+eval.sh Wednesday-WorkingHours-$NUM -dropna
+eval.sh Thursday-WorkingHours-$NUM -dropna
+eval.sh Friday-WorkingHours-$NUM -dropna
 
 echo "[INFO] stats"
 stats.sh Tuesday-WorkingHours-$NUM
