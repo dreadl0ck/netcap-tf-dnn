@@ -1,6 +1,6 @@
 #!/bin/bash
 
-NUM=$NUM
+NUM=3
 
 echo "[INFO] running experiment $NUM"
 echo "[INFO] parsing data"
