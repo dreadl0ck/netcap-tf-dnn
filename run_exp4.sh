@@ -4,16 +4,16 @@ NUM=4
 
 echo "[INFO] running experiment $NUM"
 echo "[INFO] parsing data"
-netcap -r Tuesday-WorkingHours.pcapng -out Tuesday-WorkingHours-$NUM
-netcap -r Wednesday-WorkingHours.pcapng -out Wednesday-WorkingHours-$NUM
-netcap -r Thursday-WorkingHours.pcapng -out Thursday-WorkingHours-$NUM
-netcap -r Friday-WorkingHours.pcapng -out Friday-WorkingHours-$NUM
+netcap -r Tuesday-WorkingHours.pcap -out Tuesday-WorkingHours-$NUM
+netcap -r Wednesday-WorkingHours.pcap -out Wednesday-WorkingHours-$NUM
+netcap -r Thursday-WorkingHours.pcap -out Thursday-WorkingHours-$NUM
+netcap -r Friday-WorkingHours.pcap -out Friday-WorkingHours-$NUM
 
 echo "[INFO] labeling data"
-netcap -r Tuesday-WorkingHours.pcapng -out Tuesday-WorkingHours-$NUM -label -description
-netcap -r Wednesday-WorkingHours.pcapng -out Wednesday-WorkingHours-$NUM -label -description
-netcap -r Thursday-WorkingHours.pcapng -out Thursday-WorkingHours-$NUM -label -description
-netcap -r Friday-WorkingHours.pcapng -out Friday-WorkingHours-$NUM -label -description
+netcap -r Tuesday-WorkingHours.pcap -out Tuesday-WorkingHours-$NUM -label -description
+netcap -r Wednesday-WorkingHours.pcap -out Wednesday-WorkingHours-$NUM -label -description
+netcap -r Thursday-WorkingHours.pcap -out Thursday-WorkingHours-$NUM -label -description
+netcap -r Friday-WorkingHours.pcap -out Friday-WorkingHours-$NUM -label -description
 
 echo "[INFO] evaluating"
 eval.sh Tuesday-WorkingHours-$NUM -drop=SrcIP,DstIP

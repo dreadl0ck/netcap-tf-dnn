@@ -8,7 +8,7 @@
 # This program is based on code from Jeff Heaton's Washington University (in St. Louis) Course T81-558: Applications of Deep Neural Networks.   #
 # It is licensed under the Apache License 2.0.                                                                                                  #
 # It was modified by Philipp Mieden <dreadl0ck [at] protonmail [dot] ch> for the NETCAP research project.                                       #
-# Changes to the original program are described in the thesis: "NETCAP: A framework for secure and concurrent traffic analysis"                 #
+# Changes to the original program are described in the thesis: "NETCAP: A framework for secure and concurrent network traffic analysis"         #
 #                                                                                                                                               #
 #################################################################################################################################################
 
