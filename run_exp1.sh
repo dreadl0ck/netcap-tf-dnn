@@ -10,10 +10,10 @@ netcap -r Thursday-WorkingHours.pcap -out Thursday-WorkingHours-$NUM
 netcap -r Friday-WorkingHours.pcap -out Friday-WorkingHours-$NUM
 
 echo "[INFO] labeling data"
-netcap -r Tuesday-WorkingHours.pcap -out Tuesday-WorkingHours-$NUM -label
-netcap -r Wednesday-WorkingHours.pcap -out Wednesday-WorkingHours-$NUM -label
-netcap -r Thursday-WorkingHours.pcap -out Thursday-WorkingHours-$NUM -label
-netcap -r Friday-WorkingHours.pcap -out Friday-WorkingHours-$NUM -label
+netlabel -r Tuesday-WorkingHours.pcap -out Tuesday-WorkingHours-$NUM
+netlabel -r Wednesday-WorkingHours.pcap -out Wednesday-WorkingHours-$NUM
+netlabel -r Thursday-WorkingHours.pcap -out Thursday-WorkingHours-$NUM
+netlabel -r Friday-WorkingHours.pcap -out Friday-WorkingHours-$NUM
 
 echo "[INFO] evaluating"
 eval.sh Tuesday-WorkingHours-$NUM -string_dummy
