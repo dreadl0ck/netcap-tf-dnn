@@ -3,14 +3,14 @@
 # python buffers stdout when it's not a terminal, -u flag unbuffers
 # used to get output live when using tee
 
-#################################################################################################################################################
-#                                                                                                                                               #
-# This program is based on code from Jeff Heaton's Washington University (in St. Louis) Course T81-558: Applications of Deep Neural Networks.   #
-# It is licensed under the Apache License 2.0.                                                                                                  #
-# It was modified by Philipp Mieden <dreadl0ck [at] protonmail [dot] ch> for the NETCAP research project.                                       #
-# Changes to the original program are described in the thesis: "NETCAP: A framework for secure and concurrent network traffic analysis"         #
-#                                                                                                                                               #
-#################################################################################################################################################
+###############################################################################################################################################################
+#                                                                                                                                                             #
+# This program is based on code from Jeff Heaton's Washington University (in St. Louis) Course T81-558: Applications of Deep Neural Networks.                 #
+# It is licensed under the Apache License 2.0.                                                                                                                #
+# It was modified by Philipp Mieden <dreadl0ck [at] protonmail [dot] ch> for the NETCAP research project.                                                     #
+# Changes to the original program are described in the thesis: "Concept and Implementation of memory safe feature collection for network intrusion detection" #
+#                                                                                                                                                             #
+###############################################################################################################################################################
 
 import pandas as pd
 import io
