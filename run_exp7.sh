@@ -1,6 +1,6 @@
 #!/bin/bash
 
-NUM=6
+NUM=7
 
 echo "[INFO] running experiment $NUM"
 
@@ -28,10 +28,10 @@ else
 fi
 
 echo "[INFO] labeling data"
-netlabel -r Tuesday-WorkingHours.pcap -out Tuesday-WorkingHours-$NUM -collect -exclude "Generic Protocol Command Decode" -description
-netlabel -r Wednesday-WorkingHours.pcap -out Wednesday-WorkingHours-$NUM -collect -exclude "Generic Protocol Command Decode" -description
-netlabel -r Thursday-WorkingHours.pcap -out Thursday-WorkingHours-$NUM -collect -exclude "Generic Protocol Command Decode" -description
-netlabel -r Friday-WorkingHours.pcap -out Friday-WorkingHours-$NUM -collect -exclude "Generic Protocol Command Decode" -description
+netlabel -r Tuesday-WorkingHours.pcap -out Tuesday-WorkingHours-$NUM -collect -exclude "Generic Protocol Command Decode"
+netlabel -r Wednesday-WorkingHours.pcap -out Wednesday-WorkingHours-$NUM -collect -exclude "Generic Protocol Command Decode"
+netlabel -r Thursday-WorkingHours.pcap -out Thursday-WorkingHours-$NUM -collect -exclude "Generic Protocol Command Decode"
+netlabel -r Friday-WorkingHours.pcap -out Friday-WorkingHours-$NUM -collect -exclude "Generic Protocol Command Decode"
 
 echo "[INFO] evaluating"
 eval.sh Tuesday-WorkingHours-$NUM
