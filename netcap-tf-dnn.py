@@ -3,14 +3,16 @@
 # python buffers stdout when it's not a terminal, -u flag unbuffers
 # used to get output live when using tee
 
-###############################################################################################################################################################
-#                                                                                                                                                             #
-# This program is based on code from Jeff Heaton's Washington University (in St. Louis) Course T81-558: Applications of Deep Neural Networks.                 #
-# It is licensed under the Apache License 2.0.                                                                                                                #
-# It was modified by Philipp Mieden <dreadl0ck [at] protonmail [dot] ch> for the NETCAP research project.                                                     #
-# Changes to the original program are described in the thesis: "Concept and Implementation of memory safe feature collection for network intrusion detection" #
-#                                                                                                                                                             #
-###############################################################################################################################################################
+#################################################################################################################################################################
+#                                                                                                                                                               #
+# This program is based on code from Jeff Heaton's Washington University (in St. Louis) Course T81-558: Applications of Deep Neural Networks.                   #
+# It is licensed under the Apache License 2.0.                                                                                                                  #
+# It was modified by Philipp Mieden <dreadl0ck [at] protonmail [dot] ch> for the NETCAP research project.                                                       #
+# Changes to the original program are described in the thesis: "Implementation and evaluation of secure and scalable anomaly-based network intrusion detection" #
+# The thesis can be found in the netcap repository: https://github.com/dreadl0ck/netcap                                                                         #
+# or on researchgate: https://www.researchgate.net/project/Anomaly-based-Network-Security-Monitoring                                                            #                                                                                                                                           
+#                                                                                                                                                               #                   #
+#################################################################################################################################################################
 
 import pandas as pd
 import io
