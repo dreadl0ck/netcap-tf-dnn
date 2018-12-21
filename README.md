@@ -12,7 +12,10 @@ to conduct a series of experiments on identifying malicious behavior in the [CIC
 The thesis and presentation slides are available on [researchgate](https://www.researchgate.net/project/Anomaly-based-Network-Security-Monitoring).
 Each experiment is executed with a dedicated shell script.
 
-Watch a quick demo of the deep neural network for classification of malicious behavior, on a small PCAP dump file with traffic from the LOKI Bot:
+Watch a quick demo of the deep neural network for classification of malicious behavior, on a small PCAP dump file with traffic from the LOKI Bot.
+First, the PCAP file is parsed with [netcap](github.com/dreadl0ck/netcap),
+in order to get audit records that will be labeled afterwards with the [netlabel](https://github.com/dreadl0ck/netcap#netlabel-command-line-tool) tool.
+The labeled CSV data for the TCP audit record type is then used for training (75%) and evaluation (25%) of the classification accuracy provided by the deep neural network.
 
 [![asciicast](https://asciinema.org/a/217944.svg)](https://asciinema.org/a/217944)
 
