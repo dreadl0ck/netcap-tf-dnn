@@ -1,5 +1,6 @@
 # Netcap Tensorflow Deep Neural Network
 
+
 This repository contains a python implementation for using a Deep Neural Network with [Keras](https://keras.io) and [Tensorflow](https://www.tensorflow.org),
 that operates on CSV data produced by the [netcap](github.com/dreadl0ck/netcap) framework.
 
@@ -10,6 +11,10 @@ This project was created for my bachelor thesis *"Implementation and evaluation 
 to conduct a series of experiments on identifying malicious behavior in the [CIC-IDS-2017](https://www.unb.ca/cic/datasets/ids-2017.html) dataset.
 The thesis and presentation slides are available on [researchgate](https://www.researchgate.net/project/Anomaly-based-Network-Security-Monitoring).
 Each experiment is executed with a dedicated shell script.
+
+Watch a quick demo of the deep neural network for classification of malicious behavior, on a small PCAP dump file with traffic from the LOKI Bot:
+
+[![asciicast](https://asciinema.org/a/217944.svg)](https://asciinema.org/a/217944)
 
 ## Usage
 
