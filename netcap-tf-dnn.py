@@ -1,4 +1,4 @@
-#!/usr/bin/env python -u
+#!/usr/bin/env python3 -u
 # coding: utf-8
 # python buffers stdout when it's not a terminal, -u flag unbuffers
 # used to get output live when using tee
@@ -18,7 +18,6 @@ import pandas as pd
 import io
 import requests
 import os
-import tensorflow.contrib.learn as skflow
 import numpy as np
 import matplotlib.pyplot as plt
 import argparse
@@ -285,6 +284,8 @@ if arguments.sample != None:
 # Always drop columns that are unique for every record
 drop_col('UID', df)
 drop_col('SessionID', df)
+drop_col('Payload', df)
+drop_col('Timestamp', df)
 
 # Drop additionally specified columns from the dataset
 if arguments.drop != None:
@@ -492,6 +493,13 @@ encoders = {
     'SupportedPoints'    : encode_string, # string 
     'ALPNs'              : encode_string, # string
     'Ja3'                : encode_string, # string
+
+    'TotalSize'          : encode_numeric_zscore,  # int32   
+    'ResCookies'         : encode_string,
+    'ReqCookies'         : encode_string,
+    'ReqContentEncoding' : encode_string,
+    'ResContentEncoding' : encode_string,
+    'ServerName'         : encode_string,
 }
 
 # Encode all values by looking up each column name and picking the configured encoding method
